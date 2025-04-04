@@ -1,5 +1,5 @@
 const express = require('express');
-const fetch = require('node-fetch');
+const fetch = require('node-fetch').default;
 const cheerio = require('cheerio');
 const cors = require('cors');
 
@@ -70,3 +70,4 @@ app.get('/consulta/:placa', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`🚗 Servidor funcionando en http://localhost:${PORT}`);
 });
+
